@@ -5,6 +5,7 @@ import java.sql.*;
 public class DbConnection {
     private String dbURL = "jdbc:mysql://localhost:3306/jspdb";
     private String username = "root";
+    //
     private String password = "";
     private Connection connection;
     public DbConnection(){

@@ -33,42 +33,36 @@
 
 %>
 <%
-    String username=request.getParameter("name");
-    String father=request.getParameter("father");
-    String reg=request.getParameter("reg");
-    db.insertRecord(username,father,reg);
+    String operation=request.getParameter("operations");
+    String firstNumber=request.getParameter("first");
+    int firstNo=Integer.parseInt(firstNumber);
+    String secondNumber=request.getParameter("second");
+    int secondNo=Integer.parseInt(secondNumber);
+    int resultNumber=0;
+    if(operation=="add"){
+        resultNumber=firstNo+secondNo;
+    }
+    else if(operation=="subtract"){
+        resultNumber=firstNo-secondNo;
+    }
+    else if(operation=="divide"){
+        resultNumber=firstNo/secondNo;
+    }
+    else if(operation=="multiply"){
+        resultNumber=firstNo*secondNo;
+    }
+
+    //db.insertRecord(username,father,reg);
 //    out.println("data inserted");
 %>
 
-<%--<h1>Student Name : <%=username%></h1>--%>
-<%--<p><b>Student Father Name : <%=father%></b></p>--%>
-<%--<p>Student Reg No : <%=reg%></p>--%>
+<h1>First Number : <%=firstNumber%></h1>
+<p>Second Number : <%=secondNumber%></p>
+<p>Operation : <%=operation%></p>
+<p>Resulting Number : <%=resultNumber%></p>
 
-<%
-    ResultSet rs=db.getRecords();
 
-%>
-<table>
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Father Name</th>
-        <th>Registration Number</th>
-    </tr>
-    <%
-        while (rs.next()) {
 
-    %>
-    <tr>
-        <td><%= rs.getInt("id") %></td>
-        <td><%= rs.getString("username") %></td>
-        <td><%= rs.getString("fathername") %></td>
-        <td><%= rs.getString("regno") %></td>
-    </tr>
-    <%
-        }
-    %>
-</table>
 
 </body>
 </html>

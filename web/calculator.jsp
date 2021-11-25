@@ -5,7 +5,12 @@
   Time: 10:12 PM
   To change this template use File | Settings | File Templates.
 --%>
-
+<%--Create a simple calculator using jsp pages.
+ Create a simple form with 1 dropdown select & 2 input fields
+ User select addition/subtraction/multiplication/division from dropdown.
+ User enter 2 values in number fields.
+ Develop simple logic to check what user select. For example: if user select addition then
+add these two numbers and show result. --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -120,27 +125,31 @@
 
 
   <div class="section_right">
-    <h2 id="MainScreenHeading" style="margin-top: 100px;">Create Your Account</h2>
+    <h2 id="MainScreenHeading" style="margin-top: 100px;">Do Your Calculation Here</h2>
     <hr class="One">
 
     <div id="inputContainer">
 
       <form method="post" action="show.jsp">
 
-        <label>Enter Username</label>
-        <input type="text" name="name" id="username" class="form-control" required>
+        <select name="operations" id="operations" class="form-control">
+          <option value="add">Addition</option>
+          <option value="subtract">Subtraction</option>
+          <option value="multiply">Multiplication</option>
+          <option value="divide">Division</option>
+        </select>
 
-        <label>Enter Father Name</label>
-        <input type="text" name="father" id="fathername" class="form-control">
+        <label>Enter First Number</label>
+        <input type="text" name="first" id="first" class="form-control">
 
-        <label>Enter Roll Number: </label>
-        <input type="text" name="reg" id="rollno" class="form-control">
+        <label>Enter Second Number</label>
+        <input type="text" name="second" id="second" class="form-control">
 
         <div id="message" style="margin-bottom: 20px;"></div>
 
         <!-- submit button -->
         <div class="text-center">
-          <button value="submit" class="btn btn-primary">Register Me</button>
+          <button value="submit" class="btn btn-primary">Calculate</button>
         </div>
       </form>
 
