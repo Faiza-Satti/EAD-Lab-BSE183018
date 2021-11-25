@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+
+:root{
+    --rSection:#F8F9F9;
+    --lSection:#E5E8E8;
+    --font:'Roboto Condensed', sans-serif;
+    --heightSections: 1000px;
+}
+
+body{
+    background-color: rgb(207, 192, 177);
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: var(--font);
+    font-size: 1rem;
+    line-height: 20px;
+    zoom:90%;
+}
+
+.mainContainer{
+    padding:100px 80px;
+    background-color: rgb(207, 192, 177);
+    height: 1000px;
+}
+
+.section_left{
+    font-family: var(--font);
+    color:black;
+    /*height: var(--heightSections);*/
+    height: 1000px;
+    background-image: url(../images/bg.jpg);
+    /*background-color: #ecedee;*/
+    background-size: cover;
+    float:left;
+    width:34%; /*change it to 35 to close gap btw sections*/
+    -webkit-box-shadow: 2px 7px 13px 0px #000000;
+    box-shadow: 2px 7px 13px 0px #474040;
+
+}
+
+.section_left button{
+    margin-top: 120px;
+    font-weight: bold;
+    font-family: var(--font);
+}
+
+.section_right{
+    background-color: var(--rSection);
+    font-family: var(--font);
+    color:black;
+    /*height: var(--heightSections);*/
+    height: 1000px;
+    float:right;
+    width:66%;
+    -webkit-box-shadow: 2px 7px 13px 0px #000000;
+    box-shadow: 2px 7px 13px 0px #474040;
+    padding-left: 50px;
+    padding-right: 120px;
+
+}
+
+hr.One{
+    border-top: 2px solid black;
+
+}
+
+#inputContainer{
+    margin-top: 40px;
+}
+
+
+#loginContainer{
+    margin-top: 40px;
+}
+
+.input-group{
+    width: 400px;
+}
